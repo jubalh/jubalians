@@ -129,6 +129,16 @@ echo "Downloading and compiling dwm..."
 	) > "$PTH_HOME/.xinitrc"
 	chown $USRNAME "$PTH_HOME/.xinitrc"
 	say_done
+
+	echo "Configuring to start X server when user logs in TTY1"
+	(
+		if [[ "$(tty)" == '/dev/tty1' ]]; then
+			#  exec startx && vlock
+			nohup startx "$@" > /dev/null 2>&1 &
+			vlock
+		fi
+	) >> "$PTH_HOME/.profile"
+	say-done
 fi
 
 exit 0
