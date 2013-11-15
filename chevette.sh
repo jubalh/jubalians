@@ -121,11 +121,12 @@ echo "Downloading and compiling dwm..."
 	make install
 
 	(
+		#TODO: if xresouces then xrdbmerge
+	#TODO: power management etc
 		echo "#System dwm:"
 		echo "exec dwm"
 		echo "#Local dwm:"
 		echo "#exec $PTH_SRC_DWM/dwm"
-	#TODO: power management etc
 	) > "$PTH_HOME/.xinitrc"
 	chown $USRNAME "$PTH_HOME/.xinitrc"
 	say_done
