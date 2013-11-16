@@ -123,6 +123,9 @@ echo "Downloading and compiling dwm..."
 	(
 		#TODO: if xresouces then xrdbmerge
 	#TODO: power management etc
+		echo "#urxvt daemon, so we can run urxvt client. saves some resources compared to staring multiple urxvt instances"
+		echo "exec urxvtd -q -f &"
+
 		echo "#System dwm:"
 		echo "exec dwm"
 		echo "#Local dwm:"
