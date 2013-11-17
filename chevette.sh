@@ -95,7 +95,7 @@ say_done
 
 echo "Installing themes..."
 aptitude install gtk2-engines-murrine murrine-themes
-#TODO: choose bluebird; faenza; droid sans 10
+#TODO: choose bluebird; faenza; droid sans 10; get cursor themes: polar-blue
 say_done
 
 echo "Installing common programs..."
