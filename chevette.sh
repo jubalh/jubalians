@@ -93,6 +93,11 @@ aptitude install lxappearance feh conky suckless-tools scrot xfce4-volumed xfce4
 say_done
 #volumed und power manager starten!
 
+echo "Installing themes..."
+aptitude install gtk2-engines-murrine murrine-themes
+#TODO: choose bluebird; faenza; droid sans 10
+say_done
+
 echo "Installing common programs..."
 aptitude install vlc iceweasel flashplugin-nonfree-extrasound xul-ext-adblock-plus xul-ext-noscript
 say_done
