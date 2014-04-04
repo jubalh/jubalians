@@ -29,7 +29,9 @@ grub-install --no-floppy /dev/sda
 boot-update
 
 emerge linux-firmware
-#networkmanager
+#or networkmanager
+# + nm-applet. if networkmanager then dont add dhcpcd otherwise it wont manage connections
+#launch from xinitrc: dbus-launch nm-applet &
 rc-update add dhcpcd default
 
 emerge x11-base/xorg-x11
@@ -59,7 +61,7 @@ eselect editor list
 ##read in
 eselect editor set _read_
 
-useradd -m -g users -G audio,video,cdrom,wheel _user_
+useradd -m -g users -G audio,video,cdrom,wheel,plugdev _user_
 passwd _user_
 
 #change root password
